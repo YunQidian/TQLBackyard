@@ -30,26 +30,26 @@ type           | false      | int            |贴钱的类型
 has_detail     | true       | int(1)         |是否有详细内容 0或1
 
 ### 请求Json示例
-{       
-    "uid" : 300007,
-    "title" : "平安好医生",
-    "thumbnail" ： "http://img3.imgtn.bdimg.com/it/u=3269141824,887330507&fm=21&gp=0.jpg",
-    "brief" : "走路即可赚钱，我已经领得90元",
-    "start_time" : 1443657600000,
-    "expire_time" : 1444176000000,
-    "detail" : "这是这个活动的详细介绍的源码",
-    "level" : 1,
-    "invited" : 1,
-    "type" : 12,
-    "has_detail" : 1
-}
+	{       
+	    "uid" : 300007,
+	    "title" : "平安好医生",
+	    "thumbnail" ： "http://img3.imgtn.bdimg.com/it/u=3269141824,887330507&fm=21&gp=0.jpg",
+	    "brief" : "走路即可赚钱，我已经领得90元",
+	    "start_time" : 1443657600000,
+	    "expire_time" : 1444176000000,
+	    "detail" : "这是这个活动的详细介绍的源码",
+	    "level" : 1,
+	    "invited" : 1,
+	    "type" : 12,
+	    "has_detail" : 1
+	}
 
 ### 返回Json示例
 #### 请求成功
 	{
 		"success":"true",
 		"data" : {
-		  "applyid" : 123421
+		  "tieid" : 123421
 		}
 	}
 
