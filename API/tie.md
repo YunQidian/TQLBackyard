@@ -85,14 +85,12 @@ invited        | false 	    | int(1)         |是否有邀请机制 0 或者 1
 title          | false      | string(100)    |活动名称
 phone          | false      | string(15)     |手机号码
 status         | false      | string(1)      |审核状态 0审核中 1不通过 2通过
-lastTime       | false      | long(15)       |上一条记录的时间戳
 
 ### 请求Json示例
 	{       
 	    "uid" : 300007,
 	    "invited" : 1,
-	    "title" ： "平安",
-	    "lastTime" : 1459833585473
+	    "title" ： "平安"
 	}
 
 ### 返回Json示例
@@ -100,6 +98,7 @@ lastTime       | false      | long(15)       |上一条记录的时间戳
 	{
 		"success":"true",
 		"data" : {
+		  "count" : 30,  
 		  "list" : [
 		  	{"id":111, "uid":300007,tid:0,brief:"走路即可赚钱","invited":1,
 		  	"title":"平安好医生","link":"","code":"",phone:"","status":"0",
