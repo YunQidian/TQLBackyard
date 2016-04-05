@@ -2,6 +2,7 @@
 
 [1.发布贴钱活动](#1)
 
+[2.查询申请发布贴钱的记录](#2)
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -52,6 +53,58 @@ status         | true       | string(1)      |贴的状态 '0'草稿 '1'预发�
 		"success":"true",
 		"data" : {
 		  "tieid" : 123421
+		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}
+	
+---
+[2.查询申请发布贴钱的记录](#2)
+
+### URL
+/tie/apply/list.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+uid            | false 	    | long(20)       |用户ID
+invited        | false 	    | int(1)         |是否有邀请机制 0 或者 1
+title          | false      | string(100)    |活动名称
+phone          | false      | string(15)     |手机号码
+status         | false      | string(1)      |审核状态 0审核中 1不通过 2通过
+lastTime       | false      | long(15)       |上一条记录的时间戳
+
+### 请求Json示例
+	{       
+	    "uid" : 300007,
+	    "invited" : 1,
+	    "title" ： "平安",
+	    "lastTime" : 1459833585473
+	}
+
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true",
+		"data" : {
+		  "list" : [
+		  	{"id":111, "uid":300007,tid:0,brief:"走路即可赚钱","invited":1,
+		  	"title":"平安好医生","link":"","code":"",phone:"","status":"0",
+		  	"create_time":1459833585589,"update_time":0,"is_deleted":0},
+		  	{"id":112, "uid":300007,tid:0,brief:"走路即可赚大钱","invited":1,
+		  	"title":"平安太好医生","link":"","code":"",phone:"","status":"0",
+		  	"create_time":1459833588589,"update_time":0,"is_deleted":0}
+		  ]
 		}
 	}
 
