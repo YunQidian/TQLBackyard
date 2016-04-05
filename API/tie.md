@@ -4,6 +4,8 @@
 
 [2.查询申请发布贴钱的记录](#2)
 
+[3.审核用户申请的贴钱活动是否符合标准](#3)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -114,4 +116,42 @@ lastTime       | false      | long(15)       |上一条记录的时间戳
 		"error_code":"10000",
 		"error_message":"XXXXX"
 	}
+
+---
+##<a id="3">3.审核用户申请的贴钱活动是否符合标准</a>
+
+### URL
+/tie/apply/approve.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+applyid        | true 	    | long(20)       |申请ID
+status         | true 	    | string(1)      |"1"审核不通过"2"审核通过
+reason         | false 	    | string(50)     |审核不通过的原因,当status为"1"时,传入该参数
+
+### 请求Json示例
+	{       
+	    "applyid" : 300007,
+	    "status" : "1",
+	    "reason" : "真实性不强"
+	}
+
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}	
 [错误码详见错误码对照表](错误码对照表.md)
