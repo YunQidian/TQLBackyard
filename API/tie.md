@@ -28,6 +28,7 @@ level          | false      | string(2)      |贴钱的等级
 invited        | true       | int(1)         |是否有邀请机制 0或1
 type           | false      | int            |贴钱的类型  
 has_detail     | true       | int(1)         |是否有详细内容 0或1
+status         | true       | string(1)      |贴的状态 '0'草稿 '1'预发布 '2'正式发布
 
 ### 请求Json示例
 	{       
@@ -41,7 +42,8 @@ has_detail     | true       | int(1)         |是否有详细内容 0或1
 	    "level" : 1,
 	    "invited" : 1,
 	    "type" : 12,
-	    "has_detail" : 1
+	    "has_detail" : 1,
+	    "status" : "0"
 	}
 
 ### 返回Json示例
