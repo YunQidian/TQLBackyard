@@ -28,11 +28,11 @@ thumbnail      | true       | string(500)    |活动小封面、缩略图
 brief          | true       | string(500)    |活动简要描述
 start_time     | false      | long(15)       |活动开始时间
 expire_time    | false      | long(15)       |活动结束时间
+has_detail     | true       | int(1)         |是否有详细内容 0或1
 detail         | false      | longtext       |活动的详细内容
 level          | false      | int(1)         |贴钱的等级
 invited        | true       | int(1)         |是否有邀请机制 0或1
 type           | false      | int            |贴钱的类型  
-has_detail     | true       | int(1)         |是否有详细内容 0或1
 status         | true       | int(1)         |贴的状态 0草稿 1预发布 2暂停发布 9正式发布
 
 ### 请求Json示例
@@ -43,11 +43,11 @@ status         | true       | int(1)         |贴的状态 0草稿 1预发布 2�
 	    "brief" : "走路即可赚钱，我已经领得90元",
 	    "start_time" : 1443657600000,
 	    "expire_time" : 1444176000000,
+	    "has_detail" : 1,
 	    "detail" : "这是这个活动的详细介绍的源码",
 	    "level" : 1,
 	    "invited" : 1,
 	    "type" : 12,
-	    "has_detail" : 1,
 	    "status" : 0
 	}
 
