@@ -1,6 +1,6 @@
 #贴钱活动模块 
 
-[1.发布贴钱活动](#1)
+[1.发布或者修改贴钱活动](#1)
 
 [2.查询申请发布贴钱的记录](#2)
 
@@ -10,7 +10,7 @@
 ##<a id="1">1.发布贴钱活动</a>
 
 ### URL
-/tie/publish.json
+/tie/saveOrUpdate.json
 
 ### 请求方式
 POST
@@ -21,6 +21,7 @@ Content-Type : application/json
 ### 请求参数
      参数      | 必选 	    | 类型及范围     |说明
 -------------  | ---------- | -------------  |---------- 
+tid            | false 	    | long(20)       |贴ID,在修改的时候传入,发布时不传入
 uid            | true 	    | long(20)       |用户ID
 title          | true 	    | string(100)    |活动名称
 thumbnail      | true       | string(500)    |活动小封面、缩略图
