@@ -28,7 +28,7 @@ brief          | true       | string(500)    |活动简要描述
 start_time     | false      | long(15)       |活动开始时间
 expire_time    | false      | long(15)       |活动结束时间
 detail         | false      | longtext       |活动的详细内容
-level          | false      | string(2)      |贴钱的等级
+level          | false      | int(1)         |贴钱的等级
 invited        | true       | int(1)         |是否有邀请机制 0或1
 type           | false      | int            |贴钱的类型  
 has_detail     | true       | int(1)         |是否有详细内容 0或1
