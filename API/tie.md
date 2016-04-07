@@ -165,7 +165,7 @@ reason         | false 	    | string(50)     |审核不通过的原因,当status
 ##<a id="4">4.设置用户申请的贴钱记录的贴文ID</a>
 
 ### URL
-/tie/apply/update_tid.json
+/tie/apply/settid.json
 
 ### 请求方式
 POST
