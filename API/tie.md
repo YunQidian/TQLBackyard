@@ -6,6 +6,8 @@
 
 [3.审核用户申请的贴钱活动是否符合标准](#3)
 
+[4.更新用户申请的贴钱记录的贴文ID](#4)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -158,4 +160,40 @@ reason         | false 	    | string(50)     |审核不通过的原因,当status
 		"error_code":"10000",
 		"error_message":"XXXXX"
 	}	
+	
+---
+##<a id="4">4.更新用户申请的贴钱记录的贴文ID</a>
+
+### URL
+/tie/apply/update_tid.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+applyid        | true 	    | long(20)       |申请ID
+tieid          | true 	    | long(20)       |贴文的ID
+
+### 请求Json示例
+	{       
+	    "applyid" : 300007,
+	    "tieid" : 230004
+	}
+
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}		
 [错误码详见错误码对照表](错误码对照表.md)
