@@ -94,7 +94,7 @@ uid            | false 	    | long(20)       |用户ID
 invited        | false 	    | int(1)         |是否有邀请机制 0 或者 1
 title          | false      | string(100)    |活动名称
 phone          | false      | string(15)     |手机号码
-status         | false      | string(1)      |审核状态 0审核中 1不通过 2通过
+status         | false      | int(1)      |审核状态 0审核中 1不通过 2通过
 start          | false      | int            |分页的起始记录
 
 ### 请求Json示例
@@ -112,10 +112,10 @@ start          | false      | int            |分页的起始记录
 		  "count" : 30,  
 		  "list" : [
 		  	{"id":111, "uid":300007,tid:0,brief:"走路即可赚钱","invited":1,
-		  	"title":"平安好医生","link":"","code":"",phone:"","status":"0",
+		  	"title":"平安好医生","link":"","code":"",phone:"","status":0,
 		  	"create_time":1459833585589,"update_time":0,"is_deleted":0},
 		  	{"id":112, "uid":300007,tid:0,brief:"走路即可赚大钱","invited":1,
-		  	"title":"平安太好医生","link":"","code":"",phone:"","status":"0",
+		  	"title":"平安太好医生","link":"","code":"",phone:"","status":0,
 		  	"create_time":1459833588589,"update_time":0,"is_deleted":0}
 		  ]
 		}
