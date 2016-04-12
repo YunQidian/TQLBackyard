@@ -236,7 +236,7 @@ tieid          | true 	    | long(20)       |贴文的ID
 		    "hasDetail" : 1,
 		    "createTime" : 242342333,
 		    "updateTime" : 0,
-		    "isDeleted" :０
+		    "isDeleted" : 0
 		}
 	}
 
