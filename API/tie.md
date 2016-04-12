@@ -10,6 +10,7 @@
 
 [5.通过贴的ID查询贴的内容](#5)
 
+[6.查询贴钱的记录集合](#6)
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -244,6 +245,73 @@ tieid          | true 	    | long(20)       |贴文的ID
 #### 请求成功
 	{
 		"success":"true"
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}			
+
+---
+##<a id="6">6.查询贴钱的记录集合</a>
+
+### URL
+/tie/list.json
+
+### 说明
+默认返回20条数据，低于20条则返回实际数量
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+uid            | false 	    | long(20)       |用户ID
+invited        | false 	    | int(1)         |是否有邀请机制 0 或者 1
+title          | false      | string(100)    |活动名称
+status         | false      | int(1)         |编辑状态
+start          | false      | int            |分页的其实记录    
+
+### 请求Json示例
+	{       
+	    "uid" : 300007,
+	    "invited" : 1,
+	    "title" : "借贷宝",
+	    "status" : 0,
+	    "start" : 0
+	}
+
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true",
+		"data" : {
+			"count" : 50,
+			"list" : [{
+				    "id" : 1000001,
+				    "uid" : 230004,
+				    "title" : "贴的标题",
+				    "startTime" : 34234345435,
+				    "expireTime" : 231243235445,
+				    "img" : "贴的缩略图",
+				    "brief" : "简要描述",
+				    "html" : 10000034,
+				    "status" : 1,
+				    "level" : 0,
+				    "invited" : 1,
+				    "type" : 123，
+				    "readQuantity" : 0,
+				    "hasDetail" : 1,
+				    "createTime" : 242342333,
+				    "updateTime" : 0,
+				    "isDeleted" : 0
+			}]
+		}
 	}
 
 #### 请求失败
