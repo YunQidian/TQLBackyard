@@ -8,6 +8,8 @@
 
 [4.设置用户申请的贴钱记录的贴文ID](#4)
 
+[5.通过贴的ID查询贴的内容](#5)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -196,4 +198,57 @@ tieid          | true 	    | long(20)       |贴文的ID
 		"error_code":"10000",
 		"error_message":"XXXXX"
 	}		
+
+---
+##<a id="5">5.通过贴的ID查询贴的内容</a>
+
+### URL
+/tie/findById.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+tieid          | true 	    | long(20)       |贴文的ID
+
+### 请求Json示例
+	{
+		"success" : "true",
+		"data": {       
+		    "id" : 1000001,
+		    "uid" : 230004,
+		    "title" : "贴的标题",
+		    "startTime" : 34234345435,
+		    "expireTime" : 231243235445,
+		    "img" : "贴的缩略图",
+		    "brief" : "简要描述",
+		    "html" : 10000034,
+		    "status" : 1,
+		    "level" : 0,
+		    "invited" : 1,
+		    "type" : 123，
+		    "readQuantity" : 0,
+		    "hasDetail" : 1,
+		    "createTime" : 242342333,
+		    "updateTime" : 0,
+		    "isDeleted" :０
+		}
+	}
+
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}			
 [错误码详见错误码对照表](错误码对照表.md)
