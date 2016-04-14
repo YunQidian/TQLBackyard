@@ -331,7 +331,7 @@ start          | false      | int            |分页的其实记录
 ##<a id="7">7.新增或者修改邀请休息</a>
 
 ### URL
-/tie/apply/invitiation/saveOrUpdate.json
+/tie/invitiation/saveOrUpdate.json
 
 ### 请求方式
 POST
@@ -366,6 +366,40 @@ probability_max| true       | double(3)      |出现的概率范围的最大值 
 		"data" : {
 			"invite_id" : 300234
 		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}		
+
+---
+##<a id="8">8.删除邀请信息</a>
+
+### URL
+/tie/invitiation/delete.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+invite_id      | true 	    | long(20)       |记录ID
+
+
+### 请求Json示例
+	{       
+	    "invite_id" : 800006
+	}
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"
 	}
 
 #### 请求失败
