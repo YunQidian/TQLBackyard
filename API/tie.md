@@ -32,6 +32,7 @@ uid            | true 	    | long(20)       |用户ID
 title          | true 	    | string(100)    |活动名称
 thumbnail      | true       | string(500)    |活动小封面、缩略图
 brief          | true       | string(500)    |活动简要描述
+link           | true       | string(500)    |活动的链接地址
 start_time     | false      | long(15)       |活动开始时间
 expire_time    | false      | long(15)       |活动结束时间
 has_detail     | true       | int(1)         |是否有详细内容 0或1
@@ -47,6 +48,7 @@ status         | true       | int(1)         |贴的状态 0草稿 1预发布 2�
 	    "title" : "平安好医生",
 	    "thumbnail" ： "http://img3.imgtn.bdimg.com/it/u=3269141824,887330507&fm=21&gp=0.jpg",
 	    "brief" : "走路即可赚钱，我已经领得90元",
+	    "link" : "http://t.cn/Rqh6yLG",
 	    "start_time" : 1443657600000,
 	    "expire_time" : 1444176000000,
 	    "has_detail" : 1,
