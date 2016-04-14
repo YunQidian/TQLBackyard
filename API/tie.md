@@ -12,6 +12,10 @@
 
 [6.查询贴钱的记录集合](#6)
 
+[7.新增或者修改邀请休息](#7)
+
+[8.删除邀请信息](#8)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -314,6 +318,53 @@ start          | false      | int            |分页的其实记录
 				    "updateTime" : 0,
 				    "isDeleted" : 0
 			}]
+		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}			
+
+---
+##<a id="7">7.新增或者修改邀请休息</a>
+
+### URL
+/tie/apply/invitiation/saveOrUpdate.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+id             | false 	    | long(20)       |记录ID,在修改信息的时候传入该参数
+tid            | true 	    | long(20)       |贴的ID
+uid            | true 	    | long(20)       |用户的ID
+code           | false 	    | string(15)     |邀请码
+link           | false      | string(500)    |邀请链接, link和qrcode必须有一个传入
+qrcode         | false      | string(500)    |邀请二维码图片地址, link和qrcode必须有一个传入
+probability_min| true       | double(3)      |出现的概率范围的最小值 0-1之间
+probability_max| true       | double(3)      |出现的概率范围的最大值 0-1之间
+
+### 请求Json示例
+	{       
+	    "tid" : 800006,
+	    "uid" : 400006,
+	    "link" : "http://t.cn/ewdsg",
+	    "probability_min" : 0,
+	    "probability_max" : 1
+	}
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true",
+		"data" : {
+			"invite_id" : 300234
 		}
 	}
 
