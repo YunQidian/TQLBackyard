@@ -411,7 +411,7 @@ invite_id      | true 	    | long(20)       |记录ID
 	}		
 
 ---
-##[9.根据贴ID获取某个贴的邀请信息](#9)
+##<a id="9">9.根据贴ID获取某个贴的邀请信息</a>
 
 ### URL
 /tie/invitiation/findByTid.json
