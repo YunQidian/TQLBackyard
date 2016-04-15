@@ -352,23 +352,23 @@ uid            | true 	    | long(20)       |用户的ID
 code           | false 	    | string(15)     |邀请码
 link           | false      | string(500)    |邀请链接, link和qrcode必须有一个传入
 qrcode         | false      | string(500)    |邀请二维码图片地址, link和qrcode必须有一个传入
-probability_min| true       | string(4)      |出现的概率范围的最小值 0-1之间
-probability_max| true       | string(4)      |出现的概率范围的最大值 0-1之间
+probabilityMin | true       | string(4)      |出现的概率范围的最小值 0-1之间
+probabilityMax | true       | string(4)      |出现的概率范围的最大值 0-1之间
 
 ### 请求Json示例
 	{       
 	    "tid" : 800006,
 	    "uid" : 400006,
 	    "link" : "http://t.cn/ewdsg",
-	    "probability_min" : "0.23",
-	    "probability_max" : "0.30"
+	    "probabilityMin" : "0.23",
+	    "probabilityMax" : "0.30"
 	}
 ### 返回Json示例
 #### 请求成功
 	{
 		"success":"true",
 		"data" : {
-			"invite_id" : 300234
+			"inviteid" : 300234
 		}
 	}
 
