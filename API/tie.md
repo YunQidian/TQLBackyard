@@ -18,6 +18,8 @@
 
 [9.根据贴ID获取某个贴的邀请信息](#9)
 
+[10.根据贴ID和概率返回一条邀请信息](#10)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -458,4 +460,55 @@ tid            | true 	    | long(20)       |贴的ID
 		"error_code":"10000",
 		"error_message":"XXXXX"
 	}			
+
+---
+##<a id="10">10.根据贴ID和概率返回一条邀请信息</a>
+
+### URL
+/tie/invitiation/findByTidAndProbability.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+tid            | true 	    | long(20)       |贴的ID
+probability    | true 	    | string(4)      |概率值0-1之间
+
+
+### 请求Json示例
+	{       
+	    "tid" : 800006,
+	    "probability" : "0.12"
+	}
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"，
+		"data" : {
+			"invitiation" : {
+				"id" : 1000001,
+				"tid" : 1000002,
+				"uid" : 400001,
+				"code" : "adfxe",
+				"link" : "http://t.cn/xdfwesd",
+				"qrcode" : "http://t.cn/xsdfsd",
+				"probability_min" : 0.11,
+				"probability_max" : 0.25,
+				"create_time" : 2234234234,
+				"update_time" : 2342342342,
+				"is_deleted" : 0
+			}	
+		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}				
 [错误码详见错误码对照表](错误码对照表.md)
