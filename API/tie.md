@@ -352,16 +352,16 @@ uid            | true 	    | long(20)       |用户的ID
 code           | false 	    | string(15)     |邀请码
 link           | false      | string(500)    |邀请链接, link和qrcode必须有一个传入
 qrcode         | false      | string(500)    |邀请二维码图片地址, link和qrcode必须有一个传入
-probabilityMin | true       | string(4)      |出现的概率范围的最小值 0-1之间
-probabilityMax | true       | string(4)      |出现的概率范围的最大值 0-1之间
+probabilityMin | true       | int(2)         |出现的概率范围的最小值 0-99之间
+probabilityMax | true       | int(2)         |出现的概率范围的最大值 0-99之间
 
 ### 请求Json示例
 	{       
 	    "tid" : 800006,
 	    "uid" : 400006,
 	    "link" : "http://t.cn/ewdsg",
-	    "probabilityMin" : "0.23",
-	    "probabilityMax" : "0.30"
+	    "probabilityMin" : 12,
+	    "probabilityMax" : 23
 	}
 ### 返回Json示例
 #### 请求成功
@@ -446,11 +446,11 @@ tid            | true 	    | long(20)       |贴的ID
 				"code" : "adfxe",
 				"link" : "http://t.cn/xdfwesd",
 				"qrcode" : "http://t.cn/xsdfsd",
-				"probability_min" : 0.11,
-				"probability_max" : 0.25,
-				"create_time" : 2234234234,
-				"update_time" : 2342342342,
-				"is_deleted" : 0
+				"probability_min" : 11,
+				"probability_max" : 25,
+				"createTime" : 2234234234,
+				"updateTime" : 2342342342,
+				"isDeleted" : 0
 			}]	
 		}
 	}
@@ -477,13 +477,13 @@ Content-Type : application/json
      参数      | 必选 	    | 类型及范围     |说明
 -------------  | ---------- | -------------  |---------- 
 tid            | true 	    | long(20)       |贴的ID
-probability    | true 	    | string(4)      |概率值0-1之间
+probability    | true 	    | int(2)         |概率值0-99之间
 
 
 ### 请求Json示例
 	{       
 	    "tid" : 800006,
-	    "probability" : "0.12"
+	    "probability" : 12
 	}
 ### 返回Json示例
 #### 请求成功
@@ -497,11 +497,11 @@ probability    | true 	    | string(4)      |概率值0-1之间
 				"code" : "adfxe",
 				"link" : "http://t.cn/xdfwesd",
 				"qrcode" : "http://t.cn/xsdfsd",
-				"probability_min" : 0.11,
-				"probability_max" : 0.25,
-				"create_time" : 2234234234,
-				"update_time" : 2342342342,
-				"is_deleted" : 0
+				"probabilityMin" : 11,
+				"probabilityMax" : 25,
+				"createTime" : 2234234234,
+				"updateTime" : 2342342342,
+				"isDeleted" : 0
 			}	
 		}
 	}
