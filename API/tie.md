@@ -20,6 +20,8 @@
 
 [10.根据贴ID和概率返回一条邀请信息](#10)
 
+[11.新增或者修改一个贴文源码HTML](#11)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -511,4 +513,43 @@ probability    | true 	    | int(2)         |概率值0-99之间
 		"error_code":"10000",
 		"error_message":"XXXXX"
 	}				
+
+---
+##<a id="10">10.新增或者修改一个贴文源码HTML</a>
+
+### URL
+/tie/html/saveOrUpdate.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+id             | true 	    | long(20)       |修改的时候必须传入
+text           | false      | string         |贴文源码内容
+isDeleted      | false      | int(1)         |是否删除,不传则默认为0,
+
+
+### 请求Json示例
+	{       
+	    "text" : "asdfasdfasdfasdfasdfa"
+	}
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"，
+		"data" : {
+			"id" : 324234
+		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}					
 [错误码详见错误码对照表](错误码对照表.md)
