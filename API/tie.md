@@ -530,7 +530,7 @@ Content-Type : application/json
      参数      | 必选 	    | 类型及范围     |说明
 -------------  | ---------- | -------------  |---------- 
 id             | true 	    | long(20)       |修改的时候必须传入
-text           | false      | string         |贴文源码内容
+text           | false      | string         |贴文源码内容，新增时必须传入
 isDeleted      | false      | int(1)         |是否删除,不传则默认为0,
 
 
