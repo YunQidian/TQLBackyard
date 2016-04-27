@@ -72,7 +72,7 @@ status         | false      | int(1)         |贴的状态 0草稿 1预发布 2�
 	{
 		"success":"true",
 		"data" : {
-		  "tieid" : 123421
+		  "id" : 123421
 		}
 	}
 
