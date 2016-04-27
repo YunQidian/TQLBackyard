@@ -35,7 +35,7 @@ Content-Type : application/json
 ### 请求参数
      参数      | 必选 	    | 类型及范围     |说明
 -------------  | ---------- | -------------  |---------- 
-tid            | false 	    | long(20)       |贴ID,在修改的时候传入,发布时不传入
+id            | false 	    | long(20)       |贴ID,在修改的时候传入,发布时不传入
 uid            | true 	    | long(20)       |用户ID
 title          | true 	    | string(100)    |活动名称
 img            | true       | string(500)    |活动小封面、缩略图
