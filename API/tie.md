@@ -41,14 +41,14 @@ title          | true 	    | string(100)    |活动名称
 img            | true       | string(500)    |活动小封面、缩略图
 brief          | true       | string(500)    |活动简要描述
 link           | true       | string(500)    |活动的链接地址
-startTime      | false      | long(15)       |活动开始时间
-expireTime     | false      | long(15)       |活动结束时间
-hasDetail      | true       | int(1)         |是否有详细内容 0或1
-detail         | false      | long           |活动的详细内容id
+startTime      | false      | long(15)       |活动开始时间, 不传则默认为0
+expireTime     | false      | long(15)       |活动结束时间, 不传则默认为0
+hasDetail      | false      | int(1)         |是否有详细内容 0或1,不传则默认为0
+detail         | false      | long           |活动的详细内容id，当hasDetail为1时，必传
 level          | false      | int(1)         |贴钱的等级
-invited        | true       | int(1)         |是否有邀请机制 0或1
-type           | false      | int            |贴钱的类型  
-status         | true       | int(1)         |贴的状态 0草稿 1预发布 2暂停发布 9正式发布
+invited        | false      | int(1)         |是否有邀请机制 0或1,不传则默认为0
+type           | false      | int            |贴钱的类型，不传则默认为0  
+status         | false      | int(1)         |贴的状态 0草稿 1预发布 2暂停发布 9正式发布，不传则默认为0
 
 ### 请求Json示例
 	{       
