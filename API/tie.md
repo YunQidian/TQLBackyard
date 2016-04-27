@@ -44,7 +44,7 @@ link           | true       | string(500)    |活动的链接地址
 startTime      | false      | long(15)       |活动开始时间, 不传则默认为0
 expireTime     | false      | long(15)       |活动结束时间, 不传则默认为0
 hasDetail      | false      | int(1)         |是否有详细内容 0或1,不传则默认为0
-detail         | false      | long           |活动的详细内容id，当hasDetail为1时，必传
+html           | false      | long           |活动的详细内容id，当hasDetail为1时，必传
 level          | false      | int(1)         |贴钱的等级
 invited        | false      | int(1)         |是否有邀请机制 0或1,不传则默认为0
 type           | false      | int            |贴钱的类型，不传则默认为0  
@@ -60,7 +60,7 @@ status         | false      | int(1)         |贴的状态 0草稿 1预发布 2�
 	    "startTime" : 1443657600000,
 	    "expireTime" : 1444176000000,
 	    "hasDetail" : 1,
-	    "detail" : 11111,
+	    "html" : 11111,
 	    "level" : 1,
 	    "invited" : 1,
 	    "type" : 12,
