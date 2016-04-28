@@ -22,6 +22,8 @@
 
 [11.新增或者修改一个贴文源码HTML](#11)
 
+[12.查询一个贴文源码HTML](#12)
+
 ---
 ##<a id="1">1.发布贴钱活动</a>
 
@@ -551,5 +553,46 @@ isDeleted      | false      | int(1)         |是否删除,不传则默认为0,
 	{
 		"error_code":"10000",
 		"error_message":"XXXXX"
-	}					
+	}			
+
+---
+##<a id="12">12.查询一个贴文源码HTML</a>
+
+### URL
+/tie/html/findById.json
+
+### 请求方式
+POST
+
+### Header
+Content-Type : application/json
+
+### 请求参数
+     参数      | 必选 	    | 类型及范围     |说明
+-------------  | ---------- | -------------  |---------- 
+id             | true 	    | long(20)       |记录ID
+
+
+### 请求Json示例
+	{       
+	    "id" : 121
+	}
+### 返回Json示例
+#### 请求成功
+	{
+		"success":"true"，
+		"data" : {
+			"id" : 121,
+			"text" : "sadsfasdfad",
+			"isDeleted" : 0,
+			"createTime" : 2312312,
+			"updateTime" : 123124124
+		}
+	}
+
+#### 请求失败
+	{
+		"error_code":"10000",
+		"error_message":"XXXXX"
+	}			
 [错误码详见错误码对照表](错误码对照表.md)
